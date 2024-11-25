@@ -63,17 +63,17 @@ class Ball {
     update() {
         if ((this.x + this.w > innerWidth && this.vx > 0) || (this.x < 0 && this.vx < 0)) {
             this.vx *= -1;
-            this.colorR = random(1, 400);
-            this.colorG = random(1, 400);
-            this.colorB = random(1, 400);
-            this.updateProps();
+            //this.colorR = random(1, 400);
+            //this.colorG = random(1, 400);
+            //this.colorB = random(1, 400);
+            //this.updateProps();
         }
         if (((this.y + this.h / 3) > innerHeight && this.vy > 0) || (this.y - this.h / 2 < 0 && this.vy < 0)) {
             this.vy *= -1;
-            this.colorR = random(1, 400);
-            this.colorG = random(1, 400);
-            this.colorB = random(1, 400);
-            this.updateProps();
+            //this.colorR = random(1, 400);
+            //this.colorG = random(1, 400);
+            //this.colorB = random(1, 400);
+            //this.updateProps();
         }
         this.vx += crazy;
         this.vy += crazy;
