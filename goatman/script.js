@@ -33,7 +33,6 @@ class Ball {
         // Use an off screen canvas to draw text only once
         this.canvas = new OffscreenCanvas(this.fontSize * 300, this.fontSize * 100);
         this.ctx = this.canvas.getContext('2d');
-        this.updateProps()
 
         // Calculate size
         const s = this.ctx.measureText(texts[this.text]);
@@ -43,6 +42,8 @@ class Ball {
         // Pick random (or not) position
         this.x = x || random(0 + this.w, innerWidth - (this.w));
         this.y = y || random(0 + this.h, innerHeight - (this.h / 3));
+
+        this.updateProps() 
     }
 
     // Updates the off screen canvas
