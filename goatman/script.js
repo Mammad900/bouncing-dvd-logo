@@ -33,7 +33,8 @@ class Ball {
         // Use an off screen canvas to draw text only once
         this.canvas = new OffscreenCanvas(this.fontSize * 300, this.fontSize * 100);
         this.ctx = this.canvas.getContext('2d');
-
+        this.updateProps()
+        
         // Calculate size
         const s = this.ctx.measureText(texts[this.text]);
         this.w = s.width;
