@@ -1,7 +1,7 @@
 // Canvas
 let canvas = document.querySelector("canvas");
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+canvas.width = window.innerWidth * (devicePixelRatio||1);
+canvas.height = window.innerHeight * (devicePixelRatio||1);
 let ctx = canvas.getContext("2d")
 
 // Global state variables
@@ -49,6 +49,7 @@ class Ball {
 
     // Updates the off screen canvas
     updateProps() {
+        this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
         this.ctx.fillStyle = `rgb(${this.colorR},${this.colorG},${this.colorB})`
 
         this.ctx.font = `${this.bold ? 'bold ' : ''}${this.italic ? 'italic ' : ''}${this.fontSize * 50}px ${fonts[this.font]}`;
